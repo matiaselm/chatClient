@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/colorAccent"
+    android:backgroundTint="@color/colorAccent"
+    tools:context=".activities.MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/theList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="130dp"
+        android:scrollbarSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        android:background="@color/colorPrimaryDark"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/theList"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textUserName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="UserName"
+            android:textColor="#25FFFFFF"
+            android:textColorHint="#27FFFFFF"
+            android:textIsSelectable="false"
+            android:textSize="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="108dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorText2"
+            android:text="Send"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/editMessage"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/colorAccent"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Message"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorPrimary"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sendBtn"
+            app:layout_constraintEnd_toStartOf="@+id/sendBtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
